@@ -13,6 +13,28 @@ interface Options {
 interface LANGUAGE_TRANSFER {
   year: string;
   month: string;
-  day: string;
   week: string;
+  day: string;
+  hour: string;
+  minute: string;
+  seconds: string;
 }
+
+/**
+ * Global Config
+ */
+interface Config {
+  lang: LANGUAGE;
+}
+
+/**
+ * DATETIME KEYS
+ */
+type DATETIME_KEY =
+  | "YEAR"
+  | "MONTH"
+  | "WEEK"
+  | "DAY"
+  | "HOUR"
+  | "MINUTE"
+  | "SECONDS";
