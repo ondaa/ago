@@ -14,6 +14,7 @@ import { LANGUAGES_TRANSFER, LEVEL } from "./lib/staticValue";
  */
 function getAgo(date: string, options: Options = {}) {
   const lang = options.lang || config.lang;
+  const includeAgo = options.includeAgo || false;
   const t = LANGUAGES_TRANSFER[lang];
 
   const current = dayjs();
@@ -34,8 +35,16 @@ function getAgo(date: string, options: Options = {}) {
 
   if (limit) {
     const rest = Math.floor(abs / limit.milliseconds);
-    const keyword = limit.key.toLowerCase() as keyof typeof t;
-    return rest + " " + t[keyword] + " " + t.ago;
+    const key = limit.key.toLowerCase() as keyof typeof t;
+    const keyword = options.short ? t[key][0] : t[key];
+
+    let result = rest + " " + keyword;
+
+    if (includeAgo) {
+      result += " " + t.ago;
+    }
+
+    return result;
   }
 
   return dt;

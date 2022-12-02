@@ -1,4 +1,4 @@
-export const DEFAULT_LANGUAGE = "ko";
+export const DEFAULT_LANGUAGE: LANGUAGE = "en";
 
 interface ILevel {
   level: number;

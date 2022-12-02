@@ -1,7 +1,7 @@
 import { getAgo, setGlobalLang } from "../src";
 
 // Setting global config for language
-setGlobalLang("en");
+setGlobalLang("ko");
 
 // echo
 const ago = getAgo("2022-01-02 12:00:00");

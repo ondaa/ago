@@ -12,11 +12,23 @@ console.log(ago);
 /**
  * transfer language
  */
-const transferLanguage = getAgo("2022-11-10 12:00:00", { lang: "en" });
-console.log(transferLanguage);
+const koreanVersion = getAgo("2022-11-10 12:00:00", { lang: "ko" });
+console.log(koreanVersion);
 
 /**
  * display option (choose a keyword)
  */
 const onlyDay = getAgo("2022-11-10 12:00:00", { display: "HOUR" });
 console.log(onlyDay);
+
+/**
+ * short keyword
+ */
+const shortKeyword = getAgo("2022-11-10 12:00:00", { short: true });
+console.log(shortKeyword);
+
+/**
+ * include ago
+ */
+const includeAgo = getAgo("2022-11-10 12:00:00", { includeAgo: true });
+console.log(includeAgo);

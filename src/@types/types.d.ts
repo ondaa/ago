@@ -4,8 +4,10 @@ type LANGUAGE = "ko" | "en";
  * Options
  */
 interface Options {
-  lang?: LANGUAGE;
-  display?: DATETIME_KEY;
+  lang?: LANGUAGE; // Choose display language
+  display?: DATETIME_KEY; // Display result for selected time set
+  short?: boolean; // Only include language "en" (ex) year => y
+  includeAgo?: boolean; // Optional auto include "a go" or "전" word
 }
 
 /**
