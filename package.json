@@ -1,12 +1,13 @@
 {
-  "name": "ago",
+  "name": "@jlln/ago",
   "version": "1.0.0",
   "description": "This is a library that allows you to easily see how much time has passed based on the current date.",
   "author": "Park Sung Jin <demnodey@gmail.com>",
   "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
-    "build": "tsc -p ./tsconfig.json"
+    "build": "tsc -p ./tsconfig.json",
+    "publish": "npm publish --access public"
   },
   "license": "ISC",
   "dependencies": {
