@@ -1,4 +1,5 @@
 /// <reference path="../@types/types.d.ts" />
+
 import { DEFAULT_LANGUAGE } from "./staticValue";
 
 /**
@@ -9,9 +10,9 @@ export const config: Config = {
 };
 
 /**
- * set language
+ * set global language
  * @param {LANGUAGE} lang
  */
-export function setLang(lang: LANGUAGE) {
+export function setGlobalLang(lang: LANGUAGE) {
   config.lang = lang;
 }

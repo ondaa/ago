@@ -5,6 +5,7 @@ type LANGUAGE = "ko" | "en";
  */
 interface Options {
   lang?: LANGUAGE;
+  display?: DATETIME_KEY;
 }
 
 /**
@@ -18,6 +19,7 @@ interface LANGUAGE_TRANSFER {
   hour: string;
   minute: string;
   seconds: string;
+  ago: string;
 }
 
 /**

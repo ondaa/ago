@@ -14,7 +14,7 @@ import { LANGUAGES_TRANSFER, LEVEL } from "./lib/staticValue";
  */
 function getAgo(date: string, options: Options = {}) {
   const lang = options.lang || config.lang;
-  const transfer = LANGUAGES_TRANSFER[lang];
+  const t = LANGUAGES_TRANSFER[lang];
 
   const current = dayjs();
   const ago = dayjs(date);
@@ -24,11 +24,18 @@ function getAgo(date: string, options: Options = {}) {
   // abs가 음수인 경우 미래 시간으로 간주한다.
   if (abs < 0) return null;
 
-  const limit = LEVEL.find(({ milliseconds }) => milliseconds > abs);
+  const limit = LEVEL.find(({ minimum, key }) => {
+    if (options.display) {
+      return options.display === key;
+    }
+
+    return minimum > abs;
+  });
 
   if (limit) {
-    const range = [...LEVEL].slice(0, limit.level + 1);
-    console.log(range);
+    const rest = Math.floor(abs / limit.milliseconds);
+    const keyword = limit.key.toLowerCase() as keyof typeof t;
+    return rest + " " + t[keyword] + " " + t.ago;
   }
 
   return dt;

@@ -1,12 +1,13 @@
 {
-  "name": "a_go",
-  "version": "0.0.1",
-  "description": "Previous time between current time show simple text",
-  "main": "index.js",
+  "name": "ago",
+  "version": "1.0.0",
+  "description": "This is a library that allows you to easily see how much time has passed based on the current date.",
+  "author": "Park Sung Jin <demnodey@gmail.com>",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc -p ./tsconfig.json"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "dayjs": "^1.11.6"
@@ -16,5 +17,24 @@
     "jest": "^29.3.1",
     "ts-jest": "^29.0.3",
     "typescript": "^4.9.3"
-  }
+  },
+  "keywords": [
+    "date",
+    "time",
+    "language",
+    "ago",
+    "ko",
+    "en",
+    "dayjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ondaa/ago"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ]
 }
