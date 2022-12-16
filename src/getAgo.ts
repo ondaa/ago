@@ -12,7 +12,7 @@ import { LANGUAGES_TRANSFER, LEVEL } from "./lib/staticValue";
  * @param {Options} options option's
  * @returns string
  */
-function getAgo(date: string, options: Options = {}) {
+function getAgo(date: string, options: Options = {}): number | string | null {
   const lang = options.lang || config.lang;
   const includeAgo = options.includeAgo || false;
   const t = LANGUAGES_TRANSFER[lang];
@@ -35,6 +35,11 @@ function getAgo(date: string, options: Options = {}) {
 
   if (limit) {
     const rest = Math.floor(abs / limit.milliseconds);
+
+    if (options.onlyNumberOfDate) {
+      return rest;
+    }
+
     const key = limit.key.toLowerCase() as keyof typeof t;
     const keyword = options.short ? t[key][0] : t[key];
 

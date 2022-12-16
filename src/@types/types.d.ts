@@ -7,6 +7,7 @@ interface Options {
   lang?: LANGUAGE; // Choose display language
   display?: DATETIME_KEY; // Display result for selected time set
   short?: boolean; // Only include language "en" (ex) year => y
+  onlyNumberOfDate?: boolean; // Return Only number value of Date
   includeAgo?: boolean; // Optional auto include "a go" or "전" word
 }
 

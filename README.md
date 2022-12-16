@@ -33,6 +33,16 @@ Here [example](https://github.com/ondaa/ago/tree/master/example) link
 
 <br/>
 
+## Options
+
+| name       | type                                                                    | description                           |
+| ---------- | ----------------------------------------------------------------------- | ------------------------------------- |
+| lang       | "ko" \| "en"                                                            | Display languege                      |
+| display    | "YEAR" \| "MONTH" \| "WEEK" \| "DAY" \| "HOUR" \| "MINUTE" \| "SECONDS" | Display result for selected time set  |
+| short      | optional\<boolean>                                                      | Apply to 'en' languege (ex) year => y |
+| onlyDate   | optional\<boolean>                                                      | Return only number value of Date      |
+| includeAgo | optional\<boolean>                                                      | Optional auto include "a go" word     |
+
 ## Test
 
 ```shell

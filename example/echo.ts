@@ -18,8 +18,8 @@ console.log(koreanVersion);
 /**
  * display option (choose a keyword)
  */
-const onlyDay = getAgo("2022-11-10 12:00:00", { display: "HOUR" });
-console.log(onlyDay);
+const displayHour = getAgo("2022-11-10 12:00:00", { display: "HOUR" });
+console.log(displayHour);
 
 /**
  * short keyword
@@ -32,3 +32,11 @@ console.log(shortKeyword);
  */
 const includeAgo = getAgo("2022-11-10 12:00:00", { includeAgo: true });
 console.log(includeAgo);
+
+/**
+ * only number
+ */
+const onlyNumberOfDate = getAgo("2022-11-10 12:00:00", {
+  onlyNumberOfDate: true,
+});
+console.log(onlyNumberOfDate);
